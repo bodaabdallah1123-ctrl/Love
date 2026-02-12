@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abdallah Ramadan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0a0a0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:linear-gradient(180deg,rgba(10,10,20,0.7),rgba(10,10,20,0.9));
+    z-index:-1;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:800;
+    background:linear-gradient(90deg,#7b2ff7,#00c6ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:fadeUp 1.5s ease forwards;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    color:#ddd;
+    animation:fadeUp 2s ease forwards;
+}
+
+.btn{
+    margin-top:30px;
+    padding:12px 35px;
+    border:none;
+    border-radius:40px;
+    background:linear-gradient(90deg,#7b2ff7,#00c6ff);
+    color:white;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.section-dark{
+    background:#111122;
+}
+
+.section-gradient{
+    background:linear-gradient(135deg,#1a1a2e,#16213e);
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:50px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    width:260px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:rgba(123,47,247,0.15);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+footer{
+    padding:30px;
+    text-align:center;
+    background:#0f0f1a;
+    color:#777;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <!-- غير video.mp4 بالفيديو بتاعك -->
+    <video autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div>
+        <h1>Abdallah Ramadan</h1>
+        <p>Creative Personal Portfolio</p>
+        <a href="#about"><button class="btn">اكتشف المزيد</button></a>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-dark">
+    <h2>من أنا</h2>
+    <p style="margin-top:20px;color:#bbb;">
+        مبدع أركز على التصميم العصري والهوية البصرية بأسلوب احترافي.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section class="section-gradient">
+    <h2>مهاراتي</h2>
+    <div class="cards">
+        <div class="card">تصميم جرافيك</div>
+        <div class="card">مونتاج فيديو</div>
+        <div class="card">تصميم مواقع</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-dark">
+    <h2>تواصل معي</h2>
+    <p style="margin-top:20px;color:#bbb;">
+        abdallah@email.com
+    </p>
+</section>
+
+<footer>
+    © 2026 Abdallah Ramadan
+</footer>
+
+</body>
+</html>
